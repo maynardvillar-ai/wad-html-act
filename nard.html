@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villar Maynard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #F8F3CE, #DDDAD0);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .folder {
+            width: 90%;
+            margin: 30px auto;
+            border: 2px solid #8B5E3C;
+            border-radius: 8px;
+            background: #D2B48C;
+            overflow: hidden;
+            transition: max-height 0.8s ease;
+            max-height: 60px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .folder-tab {
+            background: #A0522D;
+            color: white;
+            padding: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .glow-text {
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            transition: 0.3s;
+        }
+        
+        .glow-text:hover {
+            color: yellow;
+            text-shadow: 0 0 8px yellow, 0 0 16px orange, 0 0 24px red;
+            cursor: pointer;
+        }
+        
+        .folder-content {
+            padding: 20px;
+            background: #fffdf3;
+        }
+        
+        .folder.open {
+            max-height: 2000px;
+        }
+        
+        header {
+            background: #F7E27C;
+            color: #3B2F2F;
+            text-align: center;
+            padding: 20px;
+            margin: 20px auto;
+            width: 40%;
+            border: 3px solid #D4C65C;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        nav {
+            background: #E6DB97;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 55%;
+        }
+        
+        nav a {
+            color: #3B2F2F;
+            text-decoration: none;
+            margin: 0 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: yellow;
+            text-shadow: 0 0 8px yellow, 0 0 16px orange, 0 0 24px red;
+        }
+        
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            display: none;
+            background: #fffdf3;
+            border-radius: 10px;
+            border: 1px solid #d4c65c;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        img {
+            border-radius: 10px;
+            margin: 20px 0;
+            width: 300px;
+            height: auto;
+        }
+        
+        iframe {
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid #3B2F2F;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        th {
+            background: #F7E27C;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #E6DB97;
+            color: #3B2F2F;
+            margin-top: 40px;
+            border-top: 3px solid #D4C65C;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="folder" id="folderBox">
+        <div class="folder-tab" id="folderTab">
+            📂 Student Portfolio
+            <span class="glow-text">(click to interact)</span>
+        </div>
+        <div class="folder-content">
+
+
+            <header>
+                <h1>HTML Activity</h1>
+                <h4>Basic Student Portfolio</h4>
+            </header>
+
+
+            <nav>
+                <a onclick="toggleSection('Home')">Home</a>
+                <a onclick="toggleSection('skills/Hobbies')">Skills/hobbbies</a>
+                <a onclick="toggleSection('Profile')">Profile</a>
+                <a onclick="toggleSection('Table')">Table</a>
+                <a onclick="toggleSection('contact')">Contact</a>
+            </nav>
+
+
+            <section id="Home">
+                <h1>Villar Maynard L.</h1>
+                <h2>Silence is my piece</h2>
+                <h3>My Hobbies: Badminton, Mobagames, ListeningToMusic</h3>
+                <br>
+                <p style="text-align: justify;">
+                    <i><em><b><strong>Moving from Bacolod to Pampanga was a turning point that taught me adaptation. At first the shift was eased by family and familiarity with Tagalog but learning Kapampangan in the neighborhood pushed me out of my comfort zone and helped me grow. Music became my anchor with OPM songs reflecting emotions I couldn’t put into words.
+ </strong></em></i></p>
+
+                <br>
+                <p style="text-align: justify;"> <i><em><b><strong> Academically I’ve always been committed. My decision to pursue BS Information Systems at LVCC was guided by both logic and prayer combining my interest in technology and business with trust in God’s direction. Each step in my education feels like
+a bridge toward the future I envision.
+ </strong></em></i></p>
+
+                <br>
+                <p style="text-align: justify;"> <i><em><b><strong>Looking back I see how God’s grace carried me through every change whether in language, culture or studies. I may not have all the answers yet but I move forward with faith a clear focus and music that inspires me to keep growing.
+ </strong></em></i></p>
+
+            </section>
+
+            <section id="skills/Hobbies">
+
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Food trip</li>
+                    <li>Badminton</li>
+                    <li>Moba Games</li>
+                </ul>
+                <br><br>
+                <h2>skills</h2>
+                <ol>
+                    <li>Memorization</li>
+                    <li>Cooking</li>
+                    <li>Soft skills</li>
+                </ol>
+            </section>
+
+            <section id="Profile">
+                <h4>Profile:</h4>
+                <img src="p1.png" alt="My Photo" style="display:block;margin:auto;">
+
+                <br><br><br><br>
+                <h4>Background Music:</h4>
+                <div style="text-align:center;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kEgyXA8Gs4Y?autoplay=1&mute=1&loop=1&playlist=kEgyXA8Gs4Y" allow="autoplay; encrypted-media"></iframe>
+                </div>
+            </section>
+
+            <section id="Table">
+                <h3>Table</h3>
+                <table style="width:100%; table-layout: fixed;">
+                    <tr>
+                        <th>Course/Grade</th>
+                        <th>Skill</th>
+                        <th>Proficiency</th>
+                    </tr>
+                    <tr>
+                        <td>BSIS2</td>
+                        <td>Memorization</td>
+                        <td>Client Assesment</td>
+                    </tr>
+                    <tr>
+                        <td>BSIS3</td>
+                        <td>Coocking</td>
+                        <td>Native Dishes</td>
+                    </tr>
+                    <tr>
+                        <td>BSIS4</td>
+                        <td>SoftSkills</td>
+                        <td>Clarity of Communication</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:maynardl.villar@email.com">maynardl.villar@email.com</a></p>
+                <a href="https://github.com/maynardvillar-ai/wad-html-act.git" target="_blank">Visit my GitHub</a>
+            </section>
+
+
+            <footer>
+                <p>&copy; Aug 16, 2025 Villar Maynard All rights reserved</p>
+            </footer>
+
+        </div>
+    </div>
+
+
+    <script>
+        const folder = document.getElementById("folderBox");
+        const folderTab = document.getElementById("folderTab");
+        folderTab.addEventListener("click", () => {
+            folder.classList.toggle("open");
+        });
+
+
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            document.querySelectorAll("section").forEach(sec => {
+                if (sec.id !== sectionId) sec.style.display = "none";
+            });
+            section.style.display = (section.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+
+</html>
